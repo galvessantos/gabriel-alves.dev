@@ -1,8 +1,9 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import { createHighlighter } from 'shiki';
+
 const mdsvexOptions = {
 	extensions: ['.md'],
 	highlight: {
@@ -13,18 +14,23 @@ const mdsvexOptions = {
 			});
 			await highlighter.loadLanguage('javascript', 'typescript', 'svelte', 'py', 'python');
 			await highlighter.loadTheme('vesper');
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'vesper' }));
+			const html = escapeSvelte(
+				highlighter.codeToHtml(code, { lang, theme: 'vesper' })
+			);
 			return `{@html \`${html}\` }`;
 		}
 	}
 };
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			runtime: 'nodejs20.x'
+		})
 	}
 };
 
