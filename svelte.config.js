@@ -28,9 +28,7 @@ const config = {
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
 	kit: {
-		adapter: adapter({
-			runtime: 'nodejs20.x'
-		})
+		adapter: adapter()
 	}
 };
 
