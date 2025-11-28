@@ -16,6 +16,8 @@
 	export let end: string = '';
 	let isExpanded = false;
 
+	$: needsBorder = company === 'Clarios' || company === 'OPmobility';
+
 	let handleClick = (e: MouseEvent) => {
 		if (description) {
 			e.preventDefault();
@@ -27,8 +29,8 @@
 <a href={href || '#'} on:click={handleClick}>
 	<div class="flex rounded-lg bg-card text-card-foreground">
 		<div class="flex-none">
-			<Avatar.Root class="bg-muted-background m-auto size-12 border dark:bg-foreground">
-				<Avatar.Image src={logoUrl} alt={company} class="object-contain" />
+			<Avatar.Root class={cn("m-auto size-12 bg-transparent p-0", needsBorder ? "border border-black dark:border-0" : "border-0")}>
+				<Avatar.Image src={logoUrl} alt={company} class="h-full w-full object-cover" />
 				<Avatar.Fallback>{company[0]}</Avatar.Fallback>
 			</Avatar.Root>
 		</div>
@@ -66,7 +68,7 @@
 			{#if description}
 				{#if isExpanded}
 					<div
-						class="mt-2 text-xs sm:text-sm"
+						class="mt-2 text-xs sm:text-sm text-justify"
 						transition:slide={{
 							duration: 700,
 							easing: quartOut

@@ -5,9 +5,13 @@
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import ModeToggle from './ModeToggle.svelte';
+	import LanguageToggle from './LanguageToggle.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { mode } from 'mode-watcher';
+	import { language } from '$lib/stores/language';
+	import { getTranslation } from '$lib/translations';
 	$: theme = $mode;
+	$: t = (key: string) => getTranslation($language, key);
 </script>
 
 <div
@@ -27,12 +31,11 @@
 				<Tooltip.Root openDelay={300}>
 					<Tooltip.Trigger>
 						<Button href={item.href} variant="ghost" size="icon" class="size-12 rounded-full">
-							<!-- <item.icon class="size-4" /> -->
 							<svelte:component this={item.icon} class="size-[18px]" strokeWidth={1.5} />
 						</Button>
 					</Tooltip.Trigger>
 					<Tooltip.Content>
-						<p>{item.label}</p>
+						<p>{t(`nav.${item.label.toLowerCase()}`)}</p>
 					</Tooltip.Content>
 				</Tooltip.Root>
 			</DockIcon>
@@ -60,6 +63,9 @@
 			</DockIcon>
 		{/each}
 		<Separator orientation="vertical" class="h-full py-2" />
+		<DockIcon {magnification} {mouseX} {distance}>
+			<LanguageToggle />
+		</DockIcon>
 		<DockIcon {magnification} {mouseX} {distance}>
 			<Tooltip.Root openDelay={300}>
 				<Tooltip.Trigger>
