@@ -22,7 +22,7 @@ export const translations = {
 					start: 'Jun 2025',
 					end: 'Present',
 					description:
-						'I participated in the development of HubRecupera, a system focused on vehicle warranty recovery, where I was responsible for creating the consultation, seizure, profiles and reports modules. I worked on implementing integrations with external APIs using JWT authentication and Resilience4j, applying fallback, retry and persistent cache strategies to ensure robustness and availability. I maintained continuous code quality monitoring with SonarQube and actively collaborated through Git versioning and pipelines on Azure DevOps.'
+						'I worked as a backend and frontend developer, focusing on integrations, security, and continuous quality. On the backend, I worked with Java and Spring Boot implementing integration with an external vehicle API, automatic database synchronization, and API fallback when the local environment was unavailable. I also developed security features, such as encrypted password history, 2FA authentication, and complete image upload flows. On the frontend, I contributed to creating 2FA and password recovery screens in Angular, ensuring smooth integration between backend and UI. Additionally, I configured pipelines in Azure DevOps with SonarQube, developed unit and integration tests, and served as Scrum Master in ceremonies and removing impediments.'
 				},
 				opmobility: {
 					title: 'IT Intern',
@@ -30,7 +30,7 @@ export const translations = {
 					start: 'Oct 2024',
 					end: 'Jun 2025',
 					description:
-						'I automated internal processes with PowerApps. I developed integrations between systems using Power Automate, optimizing workflows and increasing operational efficiency. I also provided technical support to employees, solving problems related to hardware and software.'
+						'I worked on digitizing and automating internal processes, replacing manual workflows with corporate solutions developed in PowerApps. In the Security sector, I developed the TopSafety application, used to register incidents and inspections that were previously done on paper, bringing more organization and speed to the process.'
 				},
 				clarios: {
 					title: 'IT Apprentice',
@@ -38,7 +38,7 @@ export const translations = {
 					start: 'Aug 2023',
 					end: 'Oct 2024',
 					description:
-						'Creation of PowerApps applications for internal flow optimization. Error reduction and administrative support.'
+						'I worked on digitizing production processes, replacing manual records with solutions developed in PowerApps. I was responsible for creating an application to register defective batteries, eliminating paper forms and ensuring better organization and traceability of information. I implemented a structured digital flow for annotation, categorization, and data consultation, facilitating audits and reducing the chance of loss or inconsistency in records. Additionally, I supported internal teams with automations that simplified administrative routines and reduced operational rework.'
 				}
 			}
 		},
@@ -151,7 +151,7 @@ export const translations = {
 					start: 'Jun 2025',
 					end: 'Atual',
 					description:
-						'Participei do desenvolvimento do HubRecupera, um sistema voltado à recuperação de garantias veiculares, onde fui responsável pela criação dos módulos de consulta, apreensão, perfis e relatórios. Atuei na implementação de integrações com APIs externas utilizando autenticação JWT e Resilience4j, aplicando estratégias de fallback, retry e cache persistente para garantir robustez e disponibilidade. Mantive o monitoramento contínuo da qualidade do código com SonarQube e colaborei ativamente por meio de versionamento Git e pipelines no Azure DevOps.'
+						'Atuei como desenvolvedor backend e frontend, com foco em integrações, segurança e qualidade contínua. No backend, trabalhei com Java e Spring Boot implementando a integração com uma API externa de veículos, sincronização automática com o banco de dados e fallback via API quando o ambiente local estivesse indisponível. Também desenvolvi recursos de segurança, como histórico de senhas criptografadas, autenticação 2FA e fluxo completo de upload de imagens. No frontend, contribuí na criação das telas de 2FA e recuperação de senha em Angular, garantindo integração fluida entre backend e UI. Além disso, configurei pipelines no Azure DevOps com SonarQube, desenvolvi testes unitários e de integração, e atuei como Scrum Master nas cerimônias e na remoção de impedimentos.'
 				},
 				opmobility: {
 					title: 'Estagiário de T.I',
@@ -159,7 +159,7 @@ export const translations = {
 					start: 'Out 2024',
 					end: 'Jun 2025',
 					description:
-						'Automatizei processos internos com PowerApps. Desenvolvi integrações entre sistemas utilizando Power Automate, otimizando fluxos de trabalho e aumentando a eficiência operacional. Também prestava suporte técnico aos colaboradores, solucionando problemas relacionados a hardware e software.'
+						'Atuei na digitalização e automação de processos internos, substituindo fluxos manuais por soluções corporativas desenvolvidas em PowerApps. No setor de Segurança, desenvolvi o aplicativo TopSafety, utilizado para registrar ocorrências e inspeções que antes eram feitas em papel, trazendo mais organização e rapidez ao processo.'
 				},
 				clarios: {
 					title: 'Aprendiz de T.I',
@@ -167,7 +167,7 @@ export const translations = {
 					start: 'Ago 2023',
 					end: 'Out 2024',
 					description:
-						'Criação de aplicativos PowerApps para otimização de fluxos internos. Redução de erros e suporte administrativo.'
+						'Atuei na digitalização de processos produtivos, substituindo registros manuais por soluções desenvolvidas em PowerApps. Fui responsável pela criação de um aplicativo para registrar baterias defeituosas, eliminando formulários em papel e garantindo melhor organização e rastreabilidade das informações. Implementei um fluxo digital estruturado para anotação, categorização e consulta dos dados, facilitando auditorias e reduzindo a chance de perda ou inconsistência nos registros. Além disso, apoiei equipes internas com automações que simplificaram rotinas administrativas e diminuíram retrabalho operacional.'
 				}
 			}
 		},
