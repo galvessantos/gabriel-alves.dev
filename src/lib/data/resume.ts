@@ -21,22 +21,22 @@ export let DATA = {
 	url: 'https://github.com/galvessantos',
 	location: 'Sorocaba, São Paulo - Brasil',
 	avatarUrl: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
-	description: 'Software Developer — Java, Spring Boot, Angular',
+	description: 'Full Stack Developer — Java, Spring Boot, React & Node.js',
 	img: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
 	skills: [
 		'java',
 		'spring-boot',
-		'typescript',
-		'angular',
+		'nodejs',
 		'apis-restful',
-		'swagger-openapi',
-		'docker',
+		'react',
+		'typescript',
+		'html',
+		'css',
 		'postgresql',
 		'mysql',
 		'git',
 		'azure-devops',
 		'sonarqube',
-		'junit-mockito',
 		'agile'
 	],
 	navbar: [
@@ -65,6 +65,13 @@ export let DATA = {
 		}
 	},
 	work: [
+		{
+			company: 'Montreal',
+			i18n: 'montreal-fullstack',
+			href: 'https://montreal.com.br/',
+			badges: [],
+			logoUrl: MontrealImg
+		},
 		{
 			company: 'Montreal',
 			i18n: 'montreal',

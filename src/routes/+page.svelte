@@ -4,7 +4,7 @@
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
 	import RotatingText from '$lib/components/portfolio/RotatingText.svelte';
 	import Badge from '$lib/components/ui/badge/badge.svelte';
-	import { Mail, Phone } from 'lucide-svelte';
+	import { Mail, MapPin, Phone } from 'lucide-svelte';
 	import { DATA } from '$lib/data/resume';
 	import { marked } from 'marked';
 	import { language } from '$lib/stores/language';
@@ -13,7 +13,7 @@
 	let BLUR_FADE_DELAY = 0.04;
 
 	$: t = (key) => getTranslation($language, key);
-	$: rotatingWords = $language === 'pt' ? ['Java, Spring & Angular'] : ['Java, Spring & Angular'];
+	$: rotatingWords = ['Java & Spring Boot', 'React & TypeScript', 'Node.js'];
 </script>
 
 <svelte:head>
@@ -58,12 +58,20 @@
 						{#if $language === 'pt'}
 							<RotatingText
 								words={rotatingWords}
-								baseText="Desenvolvedor de Software"
+								baseText="Desenvolvedor Full Stack"
 								speed={60}
 							/>
 						{:else}
-							<RotatingText words={rotatingWords} baseText="Software Developer" speed={60} />
+							<RotatingText words={rotatingWords} baseText="Full Stack Developer" speed={60} />
 						{/if}
+					</BlurFade>
+					<BlurFade delay={BLUR_FADE_DELAY * 1.3}>
+						<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+							<span class="inline-flex items-center gap-1.5">
+								<MapPin class="size-4" />
+								{DATA.location}
+							</span>
+						</div>
 					</BlurFade>
 				</div>
 			</div>

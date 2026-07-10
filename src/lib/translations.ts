@@ -11,18 +11,26 @@ export const translations = {
 		about: {
 			title: 'About',
 			summary:
-				'My desire to build applications and turn ideas into reality led me to pursue Computer Science, a degree I will complete in 2026. Throughout my journey, I have worked at major companies in the sector, but it was at Montreal that I really started working directly with what I love: developing applications. I currently work as a Software Development intern, learning and evolving daily with technologies like Java, Spring and Angular. I also had the opportunity to act as a Scrum Master during an entire sprint, which broadened my understanding of agile methodologies, collaboration and delivery. My goal is to continue growing as a developer and contribute to projects that are useful, well-built and make a difference in people\'s daily lives.'
+				'Junior Full Stack Developer with experience in the development of corporate applications using Java, Spring Boot, React, TypeScript and Node.js. I work on the development of REST APIs, web interfaces and integrations between systems, taking part from conception to the implementation of new features. I have experience in agile environments, with a focus on software quality, performance and the continuous evolution of applications.'
 		},
 		work: {
 			title: 'Work Experience',
 			items: {
+				'montreal-fullstack': {
+					title: 'Junior Full Stack Developer',
+					location: 'Remote',
+					start: 'Jan 2026',
+					end: 'Present',
+					description:
+						'Full Stack development of corporate solutions using Java, Spring Boot, React, TypeScript and Node.js. I take part in the conception and implementation of process-automation solutions, developing new features for both frontend and backend. I build REST APIs, integrations between systems and web interfaces, contributing to the continuous evolution of the applications. I also collaborate in technical discussions, code reviews and the evolution of the architecture, prioritizing quality, maintainability and good development practices.'
+				},
 				montreal: {
 					title: 'Software Development Intern',
 					location: 'Remote',
 					start: 'Jun 2025',
-					end: 'Present',
+					end: 'Dec 2025',
 					description:
-						'I worked as a backend and frontend developer, focusing on integrations, security, and continuous quality. On the backend, I worked with Java and Spring Boot implementing integration with an external vehicle API, automatic database synchronization, and API fallback when the local environment was unavailable. I also developed security features, such as encrypted password history, 2FA authentication, and complete image upload flows. On the frontend, I contributed to creating 2FA and password recovery screens in Angular, ensuring smooth integration between backend and UI. Additionally, I configured pipelines in Azure DevOps with SonarQube, developed unit and integration tests, and served as Scrum Master in ceremonies and removing impediments.'
+						'I developed REST APIs and backend features using Java, Spring Boot and PostgreSQL. I restructured the data-access strategy, prioritizing the database over external services, which increased the performance and resilience of the application. I took part in technical discussions, the evolution of the application architecture, and the structuring of continuous-integration pipelines using Azure DevOps.'
 				},
 				opmobility: {
 					title: 'IT Intern',
@@ -67,17 +75,17 @@ export const translations = {
 			items: {
 				java: 'Java',
 				'spring-boot': 'Spring Boot',
+				nodejs: 'Node.js',
+				'apis-restful': 'REST APIs',
+				react: 'React',
 				typescript: 'TypeScript',
-				angular: 'Angular',
-				'apis-restful': 'APIs RESTful',
-				'swagger-openapi': 'Swagger/OpenAPI',
-				docker: 'Docker',
+				html: 'HTML',
+				css: 'CSS',
 				postgresql: 'PostgreSQL',
 				mysql: 'MySQL',
 				git: 'Git',
 				'azure-devops': 'Azure DevOps',
 				sonarqube: 'SonarQube',
-				'junit-mockito': 'JUnit & Mockito',
 				agile: 'Agile Methodologies (Scrum and Kanban)'
 			}
 		},
@@ -140,18 +148,26 @@ export const translations = {
 		about: {
 			title: 'Sobre',
 			summary:
-				'Meu desejo de construir aplicações e tirar ideias do papel me levou a cursar Ciência da Computação, curso que concluo em 2026. Ao longo da minha trajetória, passei por grandes empresas do setor, mas foi na Montreal que realmente comecei a trabalhar diretamente com o que amo: desenvolver aplicações. Atualmente atuo como estagiário de Desenvolvimento de Software, aprendendo e evoluindo diariamente com tecnologias como Java, Spring e Angular. Também tive a oportunidade de atuar como Scrum Master durante uma sprint inteira, o que ampliou minha visão sobre metodologias ágeis, colaboração e entrega. Meu objetivo é seguir crescendo como desenvolvedor e contribuir para projetos que sejam úteis, bem construídos e que façam a diferença no dia a dia das pessoas.'
+				'Desenvolvedor Full Stack Júnior com experiência no desenvolvimento de aplicações corporativas utilizando Java, Spring Boot, React, TypeScript e Node.js. Atuo no desenvolvimento de APIs REST, interfaces web e integrações entre sistemas, participando desde a concepção até a implementação de novas funcionalidades. Possuo experiência em ambientes ágeis, com foco em qualidade de software, performance e evolução contínua de aplicações.'
 		},
 		work: {
 			title: 'Experiência Profissional',
 			items: {
+				'montreal-fullstack': {
+					title: 'Desenvolvedor Full Stack Júnior',
+					location: 'Remoto',
+					start: 'Jan 2026',
+					end: 'Atual',
+					description:
+						'Desenvolvimento Full Stack de soluções corporativas utilizando Java, Spring Boot, React, TypeScript e Node.js. Participo da concepção e implementação de soluções voltadas à automação de processos, atuando no desenvolvimento de novas funcionalidades para frontend e backend. Desenvolvo APIs REST, integrações entre sistemas e interfaces web, contribuindo para a evolução contínua das aplicações. Colaboro em discussões técnicas, code reviews e evolução da arquitetura, priorizando qualidade, manutenibilidade e boas práticas de desenvolvimento.'
+				},
 				montreal: {
 					title: 'Estagiário de Desenvolvimento de Software',
 					location: 'Remoto',
 					start: 'Jun 2025',
-					end: 'Atual',
+					end: 'Dez 2025',
 					description:
-						'Atuei como desenvolvedor backend e frontend, com foco em integrações, segurança e qualidade contínua. No backend, trabalhei com Java e Spring Boot implementando a integração com uma API externa de veículos, sincronização automática com o banco de dados e fallback via API quando o ambiente local estivesse indisponível. Também desenvolvi recursos de segurança, como histórico de senhas criptografadas, autenticação 2FA e fluxo completo de upload de imagens. No frontend, contribuí na criação das telas de 2FA e recuperação de senha em Angular, garantindo integração fluida entre backend e UI. Além disso, configurei pipelines no Azure DevOps com SonarQube, desenvolvi testes unitários e de integração, e atuei como Scrum Master nas cerimônias e na remoção de impedimentos.'
+						'Desenvolvimento de APIs REST e funcionalidades backend utilizando Java, Spring Boot e PostgreSQL. Reestruturei a estratégia de acesso a dados, priorizando o banco de dados em relação a serviços externos, aumentando a performance e a resiliência da aplicação. Participei de discussões técnicas, evolução da arquitetura da aplicação e estruturação de pipelines de integração contínua utilizando Azure DevOps.'
 				},
 				opmobility: {
 					title: 'Estagiário de T.I',
@@ -196,17 +212,17 @@ export const translations = {
 			items: {
 				java: 'Java',
 				'spring-boot': 'Spring Boot',
+				nodejs: 'Node.js',
+				'apis-restful': 'APIs REST',
+				react: 'React',
 				typescript: 'TypeScript',
-				angular: 'Angular',
-				'apis-restful': 'APIs RESTful',
-				'swagger-openapi': 'Swagger/OpenAPI',
-				docker: 'Docker',
+				html: 'HTML',
+				css: 'CSS',
 				postgresql: 'PostgreSQL',
 				mysql: 'MySQL',
 				git: 'Git',
 				'azure-devops': 'Azure DevOps',
 				sonarqube: 'SonarQube',
-				'junit-mockito': 'JUnit & Mockito',
 				agile: 'Metodologias Ágeis (Scrum e Kanban)'
 			}
 		},
