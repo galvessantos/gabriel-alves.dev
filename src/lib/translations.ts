@@ -22,7 +22,7 @@ export const translations = {
 					start: 'Jan 2026',
 					end: 'Present',
 					description:
-						'Full Stack development of corporate solutions using Java, Spring Boot, React, TypeScript and Node.js. I take part in the conception and implementation of process-automation solutions, developing new features for both frontend and backend. I build REST APIs, integrations between systems and web interfaces, contributing to the continuous evolution of the applications. I also collaborate in technical discussions, code reviews and the evolution of the architecture, prioritizing quality, maintainability and good development practices.'
+						'I developed REST APIs in Spring Boot consumed by React/TypeScript applications, integrating third-party SDKs and evolving the platform\'s features. I implemented authentication, session persistence and typed communication between front-end and back-end, following good practices for code organization and maintainability. I structured CI/CD pipelines in Azure DevOps, with automated code-quality checks (SonarQube). I collaborate in technical discussions, code reviews and the evolution of the architecture, prioritizing quality, maintainability and good development practices.'
 				},
 				montreal: {
 					title: 'Software Development Intern',
@@ -30,7 +30,7 @@ export const translations = {
 					start: 'Jun 2025',
 					end: 'Dec 2025',
 					description:
-						'I developed REST APIs and backend features using Java, Spring Boot and PostgreSQL. I restructured the data-access strategy, prioritizing the database over external services, which increased the performance and resilience of the application. I took part in technical discussions, the evolution of the application architecture, and the structuring of continuous-integration pipelines using Azure DevOps.'
+						'Full Stack development (React and Java/Spring Boot) of authentication, password-recovery and user-interface features. I implemented a local cache/persistence strategy for high-latency external data, reducing the application\'s response time from around 40 seconds to about 500ms. I structured a continuous-integration pipeline with code-quality verification.'
 				},
 				opmobility: {
 					title: 'IT Intern',
@@ -83,9 +83,11 @@ export const translations = {
 				css: 'CSS',
 				postgresql: 'PostgreSQL',
 				mysql: 'MySQL',
-				git: 'Git',
-				'azure-devops': 'Azure DevOps',
+				docker: 'Docker',
+				'azure-devops': 'CI/CD (Azure DevOps)',
 				sonarqube: 'SonarQube',
+				'junit-mockito': 'JUnit & Mockito',
+				git: 'Git',
 				agile: 'Agile Methodologies (Scrum and Kanban)'
 			}
 		},
@@ -159,7 +161,7 @@ export const translations = {
 					start: 'Jan 2026',
 					end: 'Atual',
 					description:
-						'Desenvolvimento Full Stack de soluções corporativas utilizando Java, Spring Boot, React, TypeScript e Node.js. Participo da concepção e implementação de soluções voltadas à automação de processos, atuando no desenvolvimento de novas funcionalidades para frontend e backend. Desenvolvo APIs REST, integrações entre sistemas e interfaces web, contribuindo para a evolução contínua das aplicações. Colaboro em discussões técnicas, code reviews e evolução da arquitetura, priorizando qualidade, manutenibilidade e boas práticas de desenvolvimento.'
+						'Desenvolvi APIs REST em Spring Boot consumidas por aplicações React/TypeScript, integrando SDKs de terceiros e evoluindo funcionalidades da plataforma. Implementei funcionalidades de autenticação, persistência de sessão e comunicação tipada entre front-end e back-end, seguindo boas práticas de organização e manutenção da aplicação. Estruturei pipelines de CI/CD no Azure DevOps, com verificação automatizada de qualidade de código (SonarQube). Colaboro em discussões técnicas, code reviews e evolução da arquitetura, priorizando qualidade, manutenibilidade e boas práticas de desenvolvimento.'
 				},
 				montreal: {
 					title: 'Estagiário de Desenvolvimento de Software',
@@ -167,7 +169,7 @@ export const translations = {
 					start: 'Jun 2025',
 					end: 'Dez 2025',
 					description:
-						'Desenvolvimento de APIs REST e funcionalidades backend utilizando Java, Spring Boot e PostgreSQL. Reestruturei a estratégia de acesso a dados, priorizando o banco de dados em relação a serviços externos, aumentando a performance e a resiliência da aplicação. Participei de discussões técnicas, evolução da arquitetura da aplicação e estruturação de pipelines de integração contínua utilizando Azure DevOps.'
+						'Desenvolvimento Full Stack (React e Java/Spring Boot) de funcionalidades de autenticação, recuperação de senha e interfaces de usuário. Implementei uma estratégia de cache/persistência local para dados de fonte externa com alta latência, reduzindo o tempo de resposta da aplicação de aproximadamente 40 segundos para cerca de 500ms. Estruturei um pipeline de integração contínua com verificação de qualidade de código.'
 				},
 				opmobility: {
 					title: 'Estagiário de T.I',
@@ -220,9 +222,11 @@ export const translations = {
 				css: 'CSS',
 				postgresql: 'PostgreSQL',
 				mysql: 'MySQL',
-				git: 'Git',
-				'azure-devops': 'Azure DevOps',
+				docker: 'Docker',
+				'azure-devops': 'CI/CD (Azure DevOps)',
 				sonarqube: 'SonarQube',
+				'junit-mockito': 'JUnit & Mockito',
+				git: 'Git',
 				agile: 'Metodologias Ágeis (Scrum e Kanban)'
 			}
 		},

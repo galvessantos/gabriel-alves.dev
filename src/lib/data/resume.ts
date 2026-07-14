@@ -34,9 +34,11 @@ export let DATA = {
 		'css',
 		'postgresql',
 		'mysql',
-		'git',
+		'docker',
 		'azure-devops',
 		'sonarqube',
+		'junit-mockito',
+		'git',
 		'agile'
 	],
 	navbar: [
