@@ -18,18 +18,21 @@ import EstacaoMetereologicaImg from '$lib/imgs/estacaoMeteorologica.jpg';
 export let DATA = {
 	name: 'Gabriel Alves',
 	initials: 'GA',
-	url: 'https://github.com/galvessantos',
+	url: 'https://galvessantos.vercel.app/',
 	location: 'Sorocaba, São Paulo - Brasil',
 	avatarUrl: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
-	description: 'Full Stack Developer — Java, Spring Boot, React & Node.js',
+	description: 'Desenvolvedor Full Stack Júnior — Java, Spring Boot, React e TypeScript',
 	img: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
 	skills: [
 		'java',
 		'spring-boot',
 		'nodejs',
 		'apis-restful',
+		'openapi',
+		'rabbitmq',
 		'react',
 		'typescript',
+		'electron',
 		'html',
 		'css',
 		'postgresql',
@@ -38,6 +41,7 @@ export let DATA = {
 		'azure-devops',
 		'sonarqube',
 		'junit-mockito',
+		'testcontainers',
 		'git',
 		'agile'
 	],
@@ -111,7 +115,7 @@ export let DATA = {
 			school: 'Mairo Vergara',
 			i18n: 'mairo-vergara',
 			href: 'https://www.mairovergara.com/',
-			logoUrl: MairoVergaraImg,
+			logoUrl: MairoVergaraImg
 		}
 	],
 	projects: [
@@ -212,6 +216,7 @@ export let DATA = {
 		},
 		{
 			i18n: 'estacao-meteorologica',
+			href: 'https://github.com/galvessantos/projeto-sensor-chuva-java-sql-javascript',
 			active: true,
 			technologies: ['Java', 'JSF', 'Hibernate', 'C', 'JavaScript', 'SQLServer', 'Arduino'],
 			links: [

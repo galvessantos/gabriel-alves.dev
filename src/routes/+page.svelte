@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import BlurFade from '$lib/components/magic/BlurFade.svelte';
 	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
@@ -12,31 +12,40 @@
 
 	let BLUR_FADE_DELAY = 0.04;
 
-	$: t = (key) => getTranslation($language, key);
-	$: rotatingWords = ['Java & Spring Boot', 'React & TypeScript', 'Node.js'];
+	$: t = (key: string) => getTranslation($language, key);
+	$: rotatingWords = ['Java & Spring Boot', 'React & TypeScript', 'RabbitMQ & PostgreSQL'];
 </script>
 
 <svelte:head>
-	<title>{DATA.name}</title>
+	<title
+		>{DATA.name} | {$language === 'pt'
+			? 'Desenvolvedor Full Stack Júnior'
+			: 'Junior Full Stack Developer'}</title
+	>
 	<meta name="description" content={DATA.description} />
-	<meta property="og:title" content={DATA.name} />
+	<link rel="canonical" href={DATA.url} />
+	<meta
+		property="og:title"
+		content={`${DATA.name} | ${$language === 'pt' ? 'Desenvolvedor Full Stack Júnior' : 'Junior Full Stack Developer'}`}
+	/>
 	<meta property="og:description" content={DATA.description} />
 	<meta property="og:url" content={DATA.url} />
 	<meta property="og:site_name" content={DATA.name} />
 	<meta property="og:image" content={DATA.img} />
-	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale" content={$language === 'pt' ? 'pt_BR' : 'en_US'} />
 	<meta property="og:type" content="website" />
 	<meta name="robots" content="index, follow" />
 	<meta
 		name="googlebot"
 		content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
 	/>
-	<meta name="twitter:title" content={DATA.name} />
+	<meta
+		name="twitter:title"
+		content={`${DATA.name} | ${$language === 'pt' ? 'Desenvolvedor Full Stack Júnior' : 'Junior Full Stack Developer'}`}
+	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content={DATA.img} />
 	<meta name="twitter:description" content={DATA.description} />
-	<meta name="google-site-verification" content="your-google-verification-code" />
-	<meta name="yandex-verification" content="your-yandex-verification-code" />
 </svelte:head>
 
 <main class="flex min-h-[100dvh] flex-col space-y-10">
@@ -46,23 +55,24 @@
 				<div class="flex flex-1 flex-col space-y-5">
 					<BlurFade
 						delay={BLUR_FADE_DELAY}
-						class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none whitespace-nowrap"
+						class="whitespace-nowrap text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
 						yOffset={8}
 					>
 						{t('hero.greeting')}<span class="text-red-500">.</span>
 					</BlurFade>
-					<BlurFade
-						class="max-w-[600px] md:text-xl text-muted-foreground"
-						delay={BLUR_FADE_DELAY}
-					>
+					<BlurFade class="max-w-[600px] text-muted-foreground md:text-xl" delay={BLUR_FADE_DELAY}>
 						{#if $language === 'pt'}
 							<RotatingText
 								words={rotatingWords}
-								baseText="Desenvolvedor Full Stack"
+								baseText="Desenvolvedor Full Stack Júnior"
 								speed={60}
 							/>
 						{:else}
-							<RotatingText words={rotatingWords} baseText="Full Stack Developer" speed={60} />
+							<RotatingText
+								words={rotatingWords}
+								baseText="Junior Full Stack Developer"
+								speed={60}
+							/>
 						{/if}
 					</BlurFade>
 					<BlurFade delay={BLUR_FADE_DELAY * 1.3}>
@@ -84,7 +94,7 @@
 		</BlurFade>
 		<BlurFade delay={BLUR_FADE_DELAY * 1.4}>
 			<div
-				class="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert text-justify"
+				class="prose max-w-full text-pretty text-justify font-sans text-sm text-muted-foreground dark:prose-invert"
 			>
 				{@html marked(t('about.summary'))}
 			</div>
@@ -101,51 +111,10 @@
 					<ResumeCard
 						{...work}
 						title={t(`work.items.${work.i18n}.title`)}
+						location={t(`work.items.${work.i18n}.location`)}
 						start={t(`work.items.${work.i18n}.start`)}
 						end={t(`work.items.${work.i18n}.end`)}
 						description={t(`work.items.${work.i18n}.description`)}
-					/>
-				</BlurFade>
-			{/each}
-		</div>
-	</section>
-
-	<section id="education">
-		<div class="flex min-h-0 flex-col gap-y-3">
-			<BlurFade delay={BLUR_FADE_DELAY}>
-				<h2 class="text-xl font-bold">{t('education.title')}</h2>
-			</BlurFade>
-			{#each DATA.education as edu, id}
-				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
-					<ResumeCard
-						href={edu.href}
-						logoUrl={edu.logoUrl}
-						company={edu.school}
-						title={t('education.items.unip.degree')}
-						subtitle={t('education.items.unip.degree')}
-						start={t('education.items.unip.start')}
-						end={t('education.items.unip.end')}
-					/>
-				</BlurFade>
-			{/each}
-		</div>
-	</section>
-
-	<section id="languages">
-		<div class="flex min-h-0 flex-col gap-y-3">
-			<BlurFade delay={BLUR_FADE_DELAY}>
-				<h2 class="text-xl font-bold">{t('languages.title')}</h2>
-			</BlurFade>
-			{#each DATA.languages as lang, id}
-				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
-					<ResumeCard
-						href={lang.href}
-						logoUrl={lang.logoUrl}
-						company={lang.school}
-						title={t(`languages.items.${lang.i18n}.degree`)}
-						subtitle={t(`languages.items.${lang.i18n}.degree`)}
-						start={t(`languages.items.${lang.i18n}.start`)}
-						end={t(`languages.items.${lang.i18n}.end`)}
 					/>
 				</BlurFade>
 			{/each}
@@ -166,6 +135,46 @@
 					</BlurFade>
 				{/each}
 			</div>
+		</div>
+	</section>
+
+	<section id="education">
+		<div class="flex min-h-0 flex-col gap-y-3">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<h2 class="text-xl font-bold">{t('education.title')}</h2>
+			</BlurFade>
+			{#each DATA.education as edu, id}
+				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
+					<ResumeCard
+						href={edu.href}
+						logoUrl={edu.logoUrl}
+						company={edu.school}
+						title={t('education.items.unip.degree')}
+						start={t('education.items.unip.start')}
+						end={t('education.items.unip.end')}
+					/>
+				</BlurFade>
+			{/each}
+		</div>
+	</section>
+
+	<section id="languages">
+		<div class="flex min-h-0 flex-col gap-y-3">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<h2 class="text-xl font-bold">{t('languages.title')}</h2>
+			</BlurFade>
+			{#each DATA.languages as lang, id}
+				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
+					<ResumeCard
+						href={lang.href}
+						logoUrl={lang.logoUrl}
+						company={lang.school}
+						title={t(`languages.items.${lang.i18n}.degree`)}
+						start={t(`languages.items.${lang.i18n}.start`)}
+						end={t(`languages.items.${lang.i18n}.end`)}
+					/>
+				</BlurFade>
+			{/each}
 		</div>
 	</section>
 
@@ -199,7 +208,7 @@
 							tags={project.technologies}
 							image={project.image}
 							video={project.video}
-							links={project.links.map(link => {
+							links={project.links.map((link) => {
 								const linkKey = link.type.toLowerCase();
 								return {
 									...link,
@@ -228,10 +237,10 @@
 					>
 						{t('contact.message')}
 					</p>
-					<div class="flex flex-col items-center gap-4 mt-6">
+					<div class="mt-6 flex flex-col items-center gap-4">
 						<a
 							href="mailto:{DATA.contact.email}"
-							class="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+							class="flex items-center gap-2 font-medium text-foreground transition-colors hover:text-primary"
 						>
 							<Mail class="size-5" />
 							<span>{t('contact.email')}</span>
@@ -240,7 +249,7 @@
 							href="https://wa.me/5515998116521?text=Olá, Gabriel!"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+							class="flex items-center gap-2 font-medium text-foreground transition-colors hover:text-primary"
 						>
 							<Phone class="size-5" />
 							<span>{t('contact.phone')}</span>

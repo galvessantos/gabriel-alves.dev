@@ -11,7 +11,7 @@ export const translations = {
 		about: {
 			title: 'About',
 			summary:
-				'Junior Full Stack Developer with experience in the development of corporate applications using Java, Spring Boot, React, TypeScript and Node.js. I work on the development of REST APIs, web interfaces and integrations between systems, taking part from conception to the implementation of new features. I have experience in agile environments, with a focus on software quality, performance and the continuous evolution of applications.'
+				'Junior Full Stack Developer focused on Java and Spring Boot, with experience building corporate web and desktop applications. I develop REST APIs, system integrations and interfaces with React and TypeScript. I also work with hexagonal architecture, RabbitMQ, SSE streaming, authentication, automated testing and CI/CD pipelines.'
 		},
 		work: {
 			title: 'Work Experience',
@@ -22,7 +22,7 @@ export const translations = {
 					start: 'Jan 2026',
 					end: 'Present',
 					description:
-						'I developed REST APIs in Spring Boot consumed by React/TypeScript applications, integrating third-party SDKs and evolving the platform\'s features. I implemented authentication, session persistence and typed communication between front-end and back-end, following good practices for code organization and maintainability. I structured CI/CD pipelines in Azure DevOps, with automated code-quality checks (SonarQube). I collaborate in technical discussions, code reviews and the evolution of the architecture, prioritizing quality, maintainability and good development practices.'
+						'I work on corporate artificial-intelligence and automation products, contributing to back-end services, interfaces and system integrations. I evolve a corporate IDE based on a Visual Studio Code fork, integrating AI agents with Java, Spring Boot, React, TypeScript and Electron. I implemented multiple AI-provider integrations and an SSE streaming flow for progressive results. I also developed features for a web and mobile video-attendance platform and structured asynchronous processing with RabbitMQ, idempotency, state machines and concurrency control.'
 				},
 				montreal: {
 					title: 'Software Development Intern',
@@ -30,7 +30,7 @@ export const translations = {
 					start: 'Jun 2025',
 					end: 'Dec 2025',
 					description:
-						'Full Stack development (React and Java/Spring Boot) of authentication, password-recovery and user-interface features. I implemented a local cache/persistence strategy for high-latency external data, reducing the application\'s response time from around 40 seconds to about 500ms. I structured a continuous-integration pipeline with code-quality verification.'
+						'I developed authentication, password-recovery and user-interface features with Java, Spring Boot and React. I reduced the response time of an external query from around 40 seconds to about 500 ms by implementing local persistence and database queries. I also implemented JWT authentication, two-factor authentication, password-reuse policies and biometric-recognition integration, supported by automated tests with JUnit and Mockito.'
 				},
 				opmobility: {
 					title: 'IT Intern',
@@ -38,15 +38,15 @@ export const translations = {
 					start: 'Oct 2024',
 					end: 'Jun 2025',
 					description:
-						'I worked on digitizing and automating internal processes, replacing manual workflows with corporate solutions developed in PowerApps. In the Security sector, I developed the TopSafety application, used to register incidents and inspections that were previously done on paper, bringing more organization and speed to the process.'
+						'I developed a Microsoft Power Apps application to digitize the process used to register safety incidents.'
 				},
 				clarios: {
-					title: 'IT Apprentice',
+					title: 'Administrative Assistant',
 					location: 'Sorocaba, SP',
 					start: 'Aug 2023',
 					end: 'Oct 2024',
 					description:
-						'I worked on digitizing production processes, replacing manual records with solutions developed in PowerApps. I was responsible for creating an application to register defective batteries, eliminating paper forms and ensuring better organization and traceability of information. I implemented a structured digital flow for annotation, categorization, and data consultation, facilitating audits and reducing the chance of loss or inconsistency in records. Additionally, I supported internal teams with automations that simplified administrative routines and reduced operational rework.'
+						'I supported administrative routines, organized documents, updated internal controls and followed up on team requests.'
 				}
 			}
 		},
@@ -77,8 +77,11 @@ export const translations = {
 				'spring-boot': 'Spring Boot',
 				nodejs: 'Node.js',
 				'apis-restful': 'REST APIs',
+				openapi: 'OpenAPI',
+				rabbitmq: 'RabbitMQ',
 				react: 'React',
 				typescript: 'TypeScript',
+				electron: 'Electron',
 				html: 'HTML',
 				css: 'CSS',
 				postgresql: 'PostgreSQL',
@@ -87,39 +90,40 @@ export const translations = {
 				'azure-devops': 'CI/CD (Azure DevOps)',
 				sonarqube: 'SonarQube',
 				'junit-mockito': 'JUnit & Mockito',
+				testcontainers: 'Testcontainers',
 				git: 'Git',
 				agile: 'Agile Methodologies (Scrum and Kanban)'
 			}
 		},
 		projects: {
 			title: 'My Projects',
-			subtitle: 'Check out my latest work',
+			subtitle: 'Projects built to solve real problems',
 			description:
-				"I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.",
+				'A selection of applications where I applied back-end, front-end, integration and data skills.',
 			items: {
 				criaitor: {
 					title: 'CRIAITOR',
-					dates: 'November 2025 - November 2025',
+					dates: 'November 2025',
 					description:
-						'Application that transforms loose words into complete ideas, helping users overcome creative blocks. Allows generating suggestions, exploring alternatives and creating concepts quickly.'
+						'Web application that turns keywords into structured ideas with AI, allowing users to generate, explore and refine suggestions in a single flow.'
 				},
 				explicame: {
 					title: 'ExplicaMe',
-					dates: 'June 2025 - June 2025',
+					dates: 'June 2025',
 					description:
-						'Tool that converts images with difficult texts into simple and understandable explanations. Extracts content, simplifies language and generates audio to facilitate understanding.'
+						'Accessibility-focused application that uses OCR to extract text from images, simplify the content and generate audio.'
 				},
 				twinterior: {
 					title: 'Twinterior',
-					dates: 'May 2025 - May 2025',
+					dates: 'May 2025',
 					description:
-						'Microblogging platform inspired by Twitter, where you can create posts, manage profile with image, filter content and navigate through a dynamic feed. Developed end-to-end and available online.'
+						'Full-stack microblogging platform with posts, profile management, content filters and a dynamic feed.'
 				},
 				'estacao-meteorologica': {
 					title: 'Weather Station',
-					dates: 'November 2024 - November 2024',
+					dates: 'November 2024',
 					description:
-						'System that collects temperature, humidity and rain through sensors connected to Arduino, displaying data in real time on an integrated web interface.'
+						'Academic system that collects temperature, humidity and rainfall data from Arduino sensors and displays it in an integrated web interface.'
 				}
 			},
 			links: {
@@ -150,7 +154,7 @@ export const translations = {
 		about: {
 			title: 'Sobre',
 			summary:
-				'Desenvolvedor Full Stack Júnior com experiência no desenvolvimento de aplicações corporativas utilizando Java, Spring Boot, React, TypeScript e Node.js. Atuo no desenvolvimento de APIs REST, interfaces web e integrações entre sistemas, participando desde a concepção até a implementação de novas funcionalidades. Possuo experiência em ambientes ágeis, com foco em qualidade de software, performance e evolução contínua de aplicações.'
+				'Desenvolvedor Full Stack Júnior com foco em Java e Spring Boot e experiência na construção de aplicações corporativas web e desktop. Desenvolvo APIs REST, integrações entre sistemas e interfaces com React e TypeScript. Também atuo com arquitetura hexagonal, RabbitMQ, streaming SSE, autenticação, testes automatizados e pipelines de CI/CD.'
 		},
 		work: {
 			title: 'Experiência Profissional',
@@ -161,7 +165,7 @@ export const translations = {
 					start: 'Jan 2026',
 					end: 'Atual',
 					description:
-						'Desenvolvi APIs REST em Spring Boot consumidas por aplicações React/TypeScript, integrando SDKs de terceiros e evoluindo funcionalidades da plataforma. Implementei funcionalidades de autenticação, persistência de sessão e comunicação tipada entre front-end e back-end, seguindo boas práticas de organização e manutenção da aplicação. Estruturei pipelines de CI/CD no Azure DevOps, com verificação automatizada de qualidade de código (SonarQube). Colaboro em discussões técnicas, code reviews e evolução da arquitetura, priorizando qualidade, manutenibilidade e boas práticas de desenvolvimento.'
+						'Atuo em produtos corporativos de inteligência artificial e automação, contribuindo no backend, nas interfaces e nas integrações entre sistemas. Evoluo uma IDE corporativa baseada em um fork do Visual Studio Code, integrando agentes de IA com Java, Spring Boot, React, TypeScript e Electron. Implementei integrações com diferentes provedores de IA e um fluxo via streaming SSE para acompanhamento progressivo dos resultados. Também desenvolvi funcionalidades para uma plataforma web e mobile de registro de presença por vídeo e estruturei processamento assíncrono com RabbitMQ, idempotência, máquina de estados e controle de concorrência.'
 				},
 				montreal: {
 					title: 'Estagiário de Desenvolvimento de Software',
@@ -169,7 +173,7 @@ export const translations = {
 					start: 'Jun 2025',
 					end: 'Dez 2025',
 					description:
-						'Desenvolvimento Full Stack (React e Java/Spring Boot) de funcionalidades de autenticação, recuperação de senha e interfaces de usuário. Implementei uma estratégia de cache/persistência local para dados de fonte externa com alta latência, reduzindo o tempo de resposta da aplicação de aproximadamente 40 segundos para cerca de 500ms. Estruturei um pipeline de integração contínua com verificação de qualidade de código.'
+						'Desenvolvi funcionalidades de autenticação, recuperação de senha e interfaces de usuário com Java, Spring Boot e React. Reduzi o tempo de resposta de uma consulta externa de aproximadamente 40 segundos para cerca de 500 ms por meio de persistência local e consultas ao banco de dados. Também implementei autenticação JWT e 2FA, políticas de reutilização de senha e integração com reconhecimento biométrico, apoiadas por testes automatizados com JUnit e Mockito.'
 				},
 				opmobility: {
 					title: 'Estagiário de T.I',
@@ -177,15 +181,15 @@ export const translations = {
 					start: 'Out 2024',
 					end: 'Jun 2025',
 					description:
-						'Atuei na digitalização e automação de processos internos, substituindo fluxos manuais por soluções corporativas desenvolvidas em PowerApps. No setor de Segurança, desenvolvi o aplicativo TopSafety, utilizado para registrar ocorrências e inspeções que antes eram feitas em papel, trazendo mais organização e rapidez ao processo.'
+						'Desenvolvi uma aplicação em Microsoft Power Apps para digitalizar o processo de registro de ocorrências de segurança.'
 				},
 				clarios: {
-					title: 'Aprendiz de T.I',
+					title: 'Assistente Administrativo',
 					location: 'Sorocaba, SP',
 					start: 'Ago 2023',
 					end: 'Out 2024',
 					description:
-						'Atuei na digitalização de processos produtivos, substituindo registros manuais por soluções desenvolvidas em PowerApps. Fui responsável pela criação de um aplicativo para registrar baterias defeituosas, eliminando formulários em papel e garantindo melhor organização e rastreabilidade das informações. Implementei um fluxo digital estruturado para anotação, categorização e consulta dos dados, facilitando auditorias e reduzindo a chance de perda ou inconsistência nos registros. Além disso, apoiei equipes internas com automações que simplificaram rotinas administrativas e diminuíram retrabalho operacional.'
+						'Prestei suporte às rotinas administrativas, organizei documentos, atualizei controles internos e acompanhei demandas da área.'
 				}
 			}
 		},
@@ -216,8 +220,11 @@ export const translations = {
 				'spring-boot': 'Spring Boot',
 				nodejs: 'Node.js',
 				'apis-restful': 'APIs REST',
+				openapi: 'OpenAPI',
+				rabbitmq: 'RabbitMQ',
 				react: 'React',
 				typescript: 'TypeScript',
+				electron: 'Electron',
 				html: 'HTML',
 				css: 'CSS',
 				postgresql: 'PostgreSQL',
@@ -226,39 +233,40 @@ export const translations = {
 				'azure-devops': 'CI/CD (Azure DevOps)',
 				sonarqube: 'SonarQube',
 				'junit-mockito': 'JUnit & Mockito',
+				testcontainers: 'Testcontainers',
 				git: 'Git',
 				agile: 'Metodologias Ágeis (Scrum e Kanban)'
 			}
 		},
 		projects: {
 			title: 'Meus Projetos',
-			subtitle: 'Confira meu trabalho mais recente',
+			subtitle: 'Projetos criados para resolver problemas reais',
 			description:
-				'Trabalhei em uma variedade de projetos, desde sites simples até aplicações web complexas. Aqui estão alguns dos meus favoritos.',
+				'Uma seleção de aplicações em que coloquei em prática conhecimentos de backend, frontend, integrações e dados.',
 			items: {
 				criaitor: {
 					title: 'CRIAITOR',
-					dates: 'Novembro 2025 - Novembro 2025',
+					dates: 'Novembro de 2025',
 					description:
-						'Aplicação que transforma palavras soltas em ideias completas, ajudando usuários a superar bloqueios criativos. Permite gerar sugestões, explorar alternativas e criar conceitos rapidamente.'
+						'Aplicação web que transforma palavras-chave em ideias estruturadas com apoio de IA, permitindo gerar, explorar e refinar sugestões em um único fluxo.'
 				},
 				explicame: {
 					title: 'ExplicaMe',
-					dates: 'Junho 2025 - Junho 2025',
+					dates: 'Junho de 2025',
 					description:
-						'Ferramenta que converte imagens com textos difíceis em explicações simples e compreensíveis. Extrai o conteúdo, simplifica a linguagem e gera áudio para facilitar o entendimento.'
+						'Aplicação voltada à acessibilidade que utiliza OCR para extrair textos de imagens, simplificar o conteúdo e gerar áudio.'
 				},
 				twinterior: {
 					title: 'Twinterior',
-					dates: 'Maio 2025 - Maio 2025',
+					dates: 'Maio de 2025',
 					description:
-						'Plataforma de microblog inspirada no Twitter, onde é possível criar postagens, gerenciar perfil com imagem, filtrar conteúdos e navegar por um feed dinâmico. Desenvolvida ponta a ponta e disponível online.'
+						'Plataforma full stack de microblog com criação de postagens, gerenciamento de perfil, filtros de conteúdo e feed dinâmico.'
 				},
 				'estacao-meteorologica': {
-					title: 'Estação Metereológica',
-					dates: 'Novembro 2024 - Novembro 2024',
+					title: 'Estação Meteorológica',
+					dates: 'Novembro de 2024',
 					description:
-						'Sistema que coleta temperatura, umidade e chuva através de sensores conectados ao Arduino, exibindo os dados em tempo real em uma interface web integrada.'
+						'Sistema acadêmico que coleta temperatura, umidade e precipitação com sensores conectados ao Arduino e exibe os dados em uma interface web integrada.'
 				}
 			},
 			links: {

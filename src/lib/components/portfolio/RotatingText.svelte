@@ -15,7 +15,7 @@
 	}
 
 	onMount(() => {
-		let timeoutId: NodeJS.Timeout;
+		let timeoutId: ReturnType<typeof setTimeout>;
 
 		const animate = () => {
 			const currentPhase = phases[currentPhaseIndex % phases.length];
@@ -32,17 +32,17 @@
 		};
 
 		if (phases.length > 0) {
-			animate();
+			timeoutId = setTimeout(() => {
+				currentPhaseIndex = 1;
+				charIndex = 0;
+				displayText = '';
+				animate();
+			}, 1500);
 		}
 
 		return () => clearTimeout(timeoutId);
 	});
 </script>
 
-<span>{displayText}</span>
-
-<style>
-	span {
-		display: inline;
-	}
-</style>
+<span aria-hidden="true">{displayText}</span>
+<span class="sr-only">{baseText}</span>

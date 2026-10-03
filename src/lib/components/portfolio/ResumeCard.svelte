@@ -7,9 +7,9 @@
 	export let logoUrl: string = '';
 	export let company: string = '';
 	export let title: string = '';
-	export let subtitle: string = '';
+	export let location: string = '';
 	export let href: string = '';
-	export let badges: string[]=[''];
+	export let badges: string[] = [''];
 	export let description: string = '';
 	export let start: string = '';
 	export let end: string = '';
@@ -36,7 +36,7 @@
 			if (!trimmed) continue;
 
 			// Se a frase atual + nova frase for muito longa, fecha o parágrafo atual
-			if (currentParagraph && (currentParagraph.length + trimmed.length > 200)) {
+			if (currentParagraph && currentParagraph.length + trimmed.length > 200) {
 				paragraphs.push(currentParagraph.trim());
 				currentParagraph = trimmed;
 			} else {
@@ -57,11 +57,18 @@
 <a href={href || '#'} on:click={handleClick}>
 	<div class="flex rounded-lg bg-card text-card-foreground">
 		<div class="flex-none">
-			<div class={cn("m-auto size-12 bg-transparent p-0 flex items-center justify-center overflow-hidden rounded-full", needsBorder ? "border border-black dark:border-0" : "border-0")}>
+			<div
+				class={cn(
+					'm-auto flex size-12 items-center justify-center overflow-hidden rounded-full bg-transparent p-0',
+					needsBorder ? 'border border-black dark:border-0' : 'border-0'
+				)}
+			>
 				{#if logoUrl}
 					<img src={logoUrl} alt={company} class="h-full w-full object-cover" />
 				{:else}
-					<div class="flex h-full w-full items-center justify-center rounded-full bg-muted text-sm font-medium">
+					<div
+						class="flex h-full w-full items-center justify-center rounded-full bg-muted text-sm font-medium"
+					>
 						{company[0]}
 					</div>
 				{/if}
@@ -86,7 +93,7 @@
 						{#if description}
 							<ChevronRightIcon
 								class={cn(
-									'size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100',
+									'size-4 translate-x-0 transform opacity-60 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100',
 									isExpanded ? 'rotate-90' : 'rotate-0'
 								)}
 							/>
@@ -97,13 +104,16 @@
 					</div>
 				</div>
 				{#if title}
-					<div class="font-sans text-xs">{title}</div>
+					<div class="font-sans text-xs text-muted-foreground">
+						{title}{#if location}
+							· {location}{/if}
+					</div>
 				{/if}
 			</div>
 			{#if description}
 				{#if isExpanded}
 					<div
-						class="mt-3 rounded-xl border border-border/20 bg-muted/10 p-8 shadow-md shadow-black/5 max-w-[70ch]"
+						class="mt-3 max-w-[70ch] rounded-xl border border-border/20 bg-muted/10 p-8 shadow-md shadow-black/5"
 						transition:slide={{
 							duration: 300,
 							easing: quartOut
@@ -113,7 +123,7 @@
 						<div class="space-y-4 text-sm leading-relaxed antialiased">
 							{#each paragraphs as paragraph}
 								{#if paragraph.trim()}
-									<p class="text-foreground/75 text-justify">
+									<p class="text-justify text-foreground/75">
 										{paragraph.trim()}
 									</p>
 								{/if}
