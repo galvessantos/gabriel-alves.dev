@@ -1,4 +1,4 @@
-import { CodeIcon, Github, Globe, HomeIcon, Mail } from 'lucide-svelte';
+import { CodeIcon, Github, HomeIcon, Mail } from 'lucide-svelte';
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
 import GmailSvg from '$lib/imgs/gmail.svg';
@@ -121,7 +121,7 @@ export let DATA = {
 	projects: [
 		{
 			i18n: 'criaitor',
-			href: 'https://criaitor-front.vercel.app/',
+			href: 'https://github.com/galvessantos/projeto-gerador-ideias-backend',
 			active: true,
 			technologies: [
 				'Java',
@@ -135,18 +135,13 @@ export let DATA = {
 			],
 			links: [
 				{
-					type: 'Website',
-					href: 'https://criaitor-front.vercel.app/',
-					icon: Globe
-				},
-				{
 					type: 'Backend',
-					href: 'https://github.com/montreal-acelera-maker-squad02/projeto-gerador-ideias-backend',
+					href: 'https://github.com/galvessantos/projeto-gerador-ideias-backend',
 					icon: Github
 				},
 				{
 					type: 'Frontend',
-					href: 'https://github.com/igorsantos2102/projeto-gerador-ideias-frontend',
+					href: 'https://github.com/galvessantos/projeto-gerador-ideias-frontend',
 					icon: Github
 				}
 			],
@@ -155,7 +150,7 @@ export let DATA = {
 		},
 		{
 			i18n: 'explicame',
-			href: 'https://me-explique.vercel.app/',
+			href: 'https://github.com/galvessantos/me-explique',
 			active: true,
 			technologies: [
 				'Java',
@@ -168,11 +163,6 @@ export let DATA = {
 			],
 			links: [
 				{
-					type: 'Website',
-					href: 'https://me-explique.vercel.app/',
-					icon: Globe
-				},
-				{
 					type: 'Source',
 					href: 'https://github.com/galvessantos/me-explique',
 					icon: Github
@@ -183,7 +173,7 @@ export let DATA = {
 		},
 		{
 			i18n: 'twinterior',
-			href: 'https://projeto-blog-aceleramaker-frontend1.vercel.app/#/login',
+			href: 'https://github.com/galvessantos/projeto-blog-aceleramaker-backend',
 			active: true,
 			technologies: [
 				'Java',
@@ -195,11 +185,6 @@ export let DATA = {
 				'Swagger/OpenAPI'
 			],
 			links: [
-				{
-					type: 'Website',
-					href: 'https://projeto-blog-aceleramaker-frontend1.vercel.app/#/login',
-					icon: Globe
-				},
 				{
 					type: 'Backend',
 					href: 'https://github.com/galvessantos/projeto-blog-aceleramaker-backend',
